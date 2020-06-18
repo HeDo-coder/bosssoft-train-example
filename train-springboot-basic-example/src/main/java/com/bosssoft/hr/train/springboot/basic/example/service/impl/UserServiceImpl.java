@@ -1,6 +1,4 @@
 package com.bosssoft.hr.train.springboot.basic.example.service.impl;
-
-import com.bosssoft.hr.train.springboot.basic.example.dao.impl.UserDao;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
@@ -19,8 +17,8 @@ import java.util.List;
 public class UserServiceImpl  implements UserService<UserDTO, UserVO, UserQuery> {
 
     @Override
-    public boolean registry(UserDTO userDTO) {
-        return false;
+    public UserDTO registry(UserDTO userDTO) {
+        return null;
     }
 
     @Override
@@ -36,6 +34,11 @@ public class UserServiceImpl  implements UserService<UserDTO, UserVO, UserQuery>
 
     @Override
     public UserDTO assignRole(List<RoleDTO> roleDTOS) {
+        return null;
+    }
+
+    @Override
+    public List<UserDTO> assignRoleWith(List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
         return null;
     }
 }
