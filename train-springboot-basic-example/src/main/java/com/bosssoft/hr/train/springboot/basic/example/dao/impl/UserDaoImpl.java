@@ -1,21 +1,34 @@
+/**
+ * @file:  UserDaoImpl.java
+ * @author: Administrator    
+ * @date:   2020-6-19 11:19
+ * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
+ */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
-
+/**
+ * @file:  UserDaoImpl.java    
+ * @author: Administrator    
+ * @date:   2020-6-19 10:24
+ * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
+ */  
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 /**
- * @description: 任何继承 AbstractBaseDao 都基本基本的CRUD能力，其他业务驱动的方法
- * 需要开发者实现额外的接口
- * @author: Administrator
- * @create: 2020-06-18 22:54
- * @since
- **/
+ * @class UserDaoImpl
+ * @classdesc
+ * @author Administrator
+ * @date 2020-6-19  10:24
+ * @version 1.0.0
+ * @since 
+ */
+@Repository(value = "userDaoImpl")
 public class UserDaoImpl extends AbstractBaseDao<User, UserMapper> implements UserDao<User,UserQuery> {
     @Override
-    public List<User> queryByConditon(UserQuery query) {
+    public List<User> queryByCondition(UserQuery query) {
         return myMapper.queryByCondition(query);
     }
 }

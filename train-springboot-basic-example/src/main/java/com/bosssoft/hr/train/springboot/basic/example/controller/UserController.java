@@ -1,3 +1,9 @@
+/**
+ * @file:  UserController.java
+ * @author: Administrator
+ * @date:   2020-6-19 11:20
+ * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved.
+ */
 package com.bosssoft.hr.train.springboot.basic.example.controller;
 
 import com.bosssoft.hr.train.springboot.basic.example.api.UserServiceApi;
@@ -6,27 +12,32 @@ import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.UserVO;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
- * @param
- * @description: 这里依据界面的业务定义接口
- * @author: Administrator
- * @create: 2020-06-19 00:21
+ * @class UserController
+ * @classdesc 用户相关的业务逻辑通过控制器进行调用，功能的定义依赖api接口
+ *
+ * @author Administrator
+ * @date 2020-6-19  11:19
+ * @version 1.0.0
+ * @see
  * @since
- **/
+ */
 @RestController
 public  class UserController extends AbstractController implements UserServiceApi {
 
     @Override
-    public CommonResponse<UserVO> registry(UserDTO userDTO) {
+    public CommonResponse<UserVO> registry(@Valid UserDTO userDTO) {
         return null;
     }
 
     @Override
-    public CommonResponse<Boolean> logout(UserDTO userDTO) {
+    public CommonResponse<Boolean> logout(@Valid UserDTO userDTO) {
         return null;
     }
 
@@ -36,12 +47,12 @@ public  class UserController extends AbstractController implements UserServiceAp
     }
 
     @Override
-    public CommonResponse<UserVO> assignRole(List<RoleDTO> roleDTOS) {
+    public CommonResponse<UserVO> assignRole(@Valid List<RoleDTO> roleDTOS) {
         return null;
     }
 
     @Override
-    public CommonResponse<List<UserVO>> assignRoleWith(List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
+    public CommonResponse<List<UserVO>> assignRoleWith(@Valid List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
         return null;
     }
 }

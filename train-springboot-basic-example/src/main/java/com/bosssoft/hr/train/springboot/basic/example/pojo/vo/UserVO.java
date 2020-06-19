@@ -1,11 +1,14 @@
 package com.bosssoft.hr.train.springboot.basic.example.pojo.vo;
 
 /**
- * @param
- * @description:
- * @author: Administrator
- * @create: 2020-06-18 22:20
- * @since
- **/
+ * @class UserVO
+ * @classdesc  该对象通过控制层返回给前端
+ *
+ * @author Administrator
+ * @date 2020-6-19  11:03
+ * @version 1.0.0
+ * @see 
+ * @since 
+ */
 public class UserVO extends BaseVO {
 }
