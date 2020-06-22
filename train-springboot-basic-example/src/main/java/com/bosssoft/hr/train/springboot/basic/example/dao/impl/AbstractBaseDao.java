@@ -1,7 +1,7 @@
 /**
- * @file:  AbstractBaseDao.java    
+ * @file:  AbstractBaseDao.java
  * @author: Administrator    
- * @date:   2020-6-19 11:18
+ * @date:   2020-6-19 11:46
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;

@@ -13,4 +13,4 @@ spring:
       configuration:
         map-underscore-to-camel-case: true
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-      type-aliases-package: com.bosssoft.hr.train.springboot.basic.example.pojo.query.
+      type-aliases-package: com.bosssoft.hr.train.springboot.basic.example.pojo.query
