@@ -70,6 +70,6 @@ public interface UserServiceApi {
      * @see
      * @since
      */
-    CommonResponse<List<UserVO>> assignRoleWith(@RequestBody @Valid  List<UserDTO> userDTOS,List<RoleDTO> roleDTOS);
+    CommonResponse<List<UserVO>> assignRole(@RequestBody @Valid  List<UserDTO> userDTOS,List<RoleDTO> roleDTOS);
 
 }

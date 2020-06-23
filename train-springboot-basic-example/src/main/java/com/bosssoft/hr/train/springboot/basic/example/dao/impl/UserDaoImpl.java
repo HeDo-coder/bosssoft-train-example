@@ -26,9 +26,10 @@ import java.util.List;
  * @since 
  */
 @Repository(value = "userDaoImpl")
-public class UserDaoImpl extends AbstractBaseDao<User, UserMapper> implements UserDao<User,UserQuery> {
+public class UserDaoImpl extends AbstractUserDao<User,UserMapper> {
     @Override
     public List<User> queryByCondition(UserQuery query) {
         return myMapper.queryByCondition(query);
+
     }
 }

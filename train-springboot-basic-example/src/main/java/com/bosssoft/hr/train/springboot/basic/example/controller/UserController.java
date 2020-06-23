@@ -31,6 +31,7 @@ import java.util.List;
 @RestController
 public  class UserController extends AbstractController implements UserServiceApi {
 
+
     @Override
     public CommonResponse<UserVO> registry(@Valid UserDTO userDTO) {
         return null;
@@ -52,7 +53,9 @@ public  class UserController extends AbstractController implements UserServiceAp
     }
 
     @Override
-    public CommonResponse<List<UserVO>> assignRoleWith(@Valid List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
+    public CommonResponse<List<UserVO>> assignRole(@Valid List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
         return null;
     }
+
+
 }

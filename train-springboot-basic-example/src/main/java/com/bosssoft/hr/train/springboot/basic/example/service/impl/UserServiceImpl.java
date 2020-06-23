@@ -6,6 +6,7 @@
  */  
 package com.bosssoft.hr.train.springboot.basic.example.service.impl;
 import com.bosssoft.hr.train.springboot.basic.example.dao.impl.AbstractBaseDao;
+import com.bosssoft.hr.train.springboot.basic.example.dao.impl.AbstractUserDao;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.exception.BusinessErrorCode;
 import com.bosssoft.hr.train.springboot.basic.example.exception.BusinessException;
@@ -38,11 +39,13 @@ public class UserServiceImpl  implements UserService<UserDTO, UserVO, UserQuery>
      */
     @Autowired
     @Qualifier(value = "userDaoImpl")
-    private AbstractBaseDao<User, UserMapper> abstractBaseDao;
+    private AbstractUserDao<User, UserMapper> abstractUserDao;
     @Override
     public UserDTO registry(UserDTO userDTO) {
         try {
+
             // do service
+            abstractUserDao.save(null);
             return null;
         }catch (Exception ex){
             throw new BusinessException(BusinessErrorCode.FAIL_TO_REGIST_USER,ex);

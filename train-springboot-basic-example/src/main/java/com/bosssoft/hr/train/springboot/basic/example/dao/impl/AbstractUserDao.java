@@ -7,8 +7,10 @@
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
 import com.bosssoft.hr.train.springboot.basic.example.dao.IBaseDao;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import tk.mybatis.mapper.common.Mapper;
-import tk.mybatis.mapper.common.MySqlMapper;
 
 /**
  * @description: 该类适配底层tk.mybatis的mapper的基本的增删除该查方法
@@ -18,24 +20,6 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractBaseDao<T,M extends Mapper<T>> implements IBaseDao<T> {
+public abstract class AbstractUserDao<T,M extends Mapper<T>>   extends AbstractBaseDao <User,UserMapper>  implements UserDao<User, UserQuery> {
 
-    /**
-     *  注入框架隔离的Mappper,后面的数据操作依赖此mapper
-     */
-    protected M myMapper;
-    @Override
-    public int save(T entity) {
-       return myMapper.insert(entity);
-    }
-
-    @Override
-    public int delete(T entity) {
-        return myMapper.delete(entity);
-    }
-
-    @Override
-    public int update(T entity) {
-        return myMapper.updateByPrimaryKey(entity);
-    }
 }

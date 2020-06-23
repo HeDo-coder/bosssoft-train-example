@@ -8,7 +8,13 @@ import tk.mybatis.mapper.common.MySqlMapper;
 import java.util.List;
 
 /**
- *
+ * @class UserMapper
+ * @classdesc 继承通用tk.mybatis mapper的增删除该方法，增加基于xml配置文件的自定义方法
+ * @author Administrator
+ * @date 2020-6-23  23:02
+ * @version 1.0.0
+ * @see
+ * @since
  */
 @Repository
 @org.apache.ibatis.annotations.Mapper
