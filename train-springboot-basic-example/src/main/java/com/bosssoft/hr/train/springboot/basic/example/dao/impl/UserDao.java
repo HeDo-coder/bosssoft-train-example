@@ -8,8 +8,6 @@ package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.BaseQuery;
-
-import java.util.ArrayList;
 import java.util.List;
 /**
  * @class UserDao

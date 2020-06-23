@@ -5,7 +5,6 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.service.impl;
-import com.bosssoft.hr.train.springboot.basic.example.dao.impl.AbstractBaseDao;
 import com.bosssoft.hr.train.springboot.basic.example.dao.impl.AbstractUserDao;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.exception.BusinessErrorCode;

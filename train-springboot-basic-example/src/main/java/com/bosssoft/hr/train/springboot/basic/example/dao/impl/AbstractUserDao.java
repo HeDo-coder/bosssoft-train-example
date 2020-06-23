@@ -5,8 +5,6 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
-
-import com.bosssoft.hr.train.springboot.basic.example.dao.IBaseDao;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;

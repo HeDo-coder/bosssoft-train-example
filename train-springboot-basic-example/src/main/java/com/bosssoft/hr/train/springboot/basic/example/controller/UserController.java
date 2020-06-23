@@ -12,7 +12,6 @@ import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.UserVO;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
