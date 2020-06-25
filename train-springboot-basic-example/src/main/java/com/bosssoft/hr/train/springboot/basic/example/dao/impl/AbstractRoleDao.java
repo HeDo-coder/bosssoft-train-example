@@ -21,6 +21,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractRoleDao<T,M extends Mapper<T>>   extends AbstractBaseDao <Role, RoleMapper>  implements RoleDao<Role, RoleQuery> {
+public abstract class AbstractRoleDao<T,M extends Mapper<T>,Q>   extends AbstractBaseDao <Role, RoleMapper,RoleQuery>  implements RoleDao<Role> {
 
 }

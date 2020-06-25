@@ -11,12 +11,12 @@ package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
  * @date:   2020-6-19 10:24
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.DepartmentMapper;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.RoleMapper;
-import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Department;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Role;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.query.DepartmentQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.RoleQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -29,11 +29,11 @@ import java.util.List;
  * @version 1.0.0
  * @since 
  */
-@Repository(value = "roleDaoImpl")
-public class RoleDaoImpl extends AbstractRoleDao<Role, RoleMapper,RoleQuery> {
+@Repository(value = "departmentDaoImpl")
+public class DepartmentDaoImpl extends AbstractDepartmentDao<Department, DepartmentMapper, DepartmentQuery> {
 
     @Override
-    public List<Role> queryByCondition(RoleQuery query) {
-        return null;
+    public List<Department> queryByCondition(DepartmentQuery query) {
+        return super.queryByCondition(query);
     }
 }

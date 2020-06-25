@@ -19,7 +19,7 @@ import java.util.List;
  * @see 
  * @since 
  */
-public interface UserDao<T extends User,Q extends BaseQuery> extends CommonQuery<T,Q> {
+public interface UserDao<T extends User> {
 
 
 }

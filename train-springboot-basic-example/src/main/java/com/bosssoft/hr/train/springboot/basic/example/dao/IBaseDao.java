@@ -8,7 +8,7 @@ package com.bosssoft.hr.train.springboot.basic.example.dao;
  * @see
  * @since 
  */
-public interface IBaseDao<T> {
+public interface IBaseDao<T,Q> extends CommonQuery<T,Q> {
 
     /**
      * @param: 

@@ -6,8 +6,11 @@
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
+import com.bosssoft.hr.train.springboot.basic.example.dao.CommonQuery;
 import com.bosssoft.hr.train.springboot.basic.example.dao.IBaseDao;
 import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
 
 /**
  * @description: 该类适配底层tk.mybatis的mapper的基本的增删除该查方法
@@ -17,7 +20,7 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractBaseDao<T,M extends Mapper<T>> implements IBaseDao<T> {
+public abstract class AbstractBaseDao<T,M extends Mapper<T>,Q> implements IBaseDao<T,Q> {
 
     /**
      *  注入框架隔离的Mappper,后面的数据操作依赖此mapper
@@ -36,5 +39,10 @@ public abstract class AbstractBaseDao<T,M extends Mapper<T>> implements IBaseDao
     @Override
     public int update(T entity) {
         return myMapper.updateByPrimaryKey(entity);
+    }
+
+    @Override
+    public List<T> queryByCondition(Q query) {
+        return null;
     }
 }

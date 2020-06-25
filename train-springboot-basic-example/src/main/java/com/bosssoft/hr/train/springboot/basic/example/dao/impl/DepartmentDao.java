@@ -6,6 +6,7 @@
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
+import com.bosssoft.hr.train.springboot.basic.example.dao.CommonQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Department;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.BaseQuery;
 
@@ -20,12 +21,5 @@ import java.util.List;
  * @see 
  * @since 
  */
-public interface DepartmentDao<T extends Department,Q extends BaseQuery>{
-   /**
-    * @param: 组合的查询条件
-    * @return: 满足条件的用户数据集合
-    * @see
-    * @since
-    */
-    List<Department> queryByCondition(Q query);
+public interface DepartmentDao<T extends Department,Q extends BaseQuery>  {
 }

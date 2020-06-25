@@ -12,6 +12,11 @@ public enum BusinessErrorCode {
      *
      */
     FAIL_TO_REGIST_USER(100001,"保存用户失败"),
+
+    BASE_CRUD_SERVICE_ERROR_CODE_CREATE(100000,"保存失败"),
+    BASE_CRUD_SERVICE_ERROR_CODE_RETRIEVE(100001,"查询失败"),
+    BASE_CRUD_SERVICE_ERROR_CODE_UPDATE(100002,"更新失败"),
+    BASE_CRUD_SERVICE_ERROR_CODE_DELETE(100003,"删除失败"),
     /**
      *  以上增加各种码
      */
