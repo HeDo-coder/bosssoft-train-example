@@ -6,10 +6,11 @@
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
-import com.bosssoft.hr.train.springboot.basic.example.dao.CommonQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Company;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.BaseQuery;
+
 import java.util.List;
+
 /**
  * @class UserDao
  * @classdesc 定义非通用的Mapper的方法，通用方法从<tt>AbstractBaseDao</tt>AbstractBaseDao继承
@@ -19,7 +20,12 @@ import java.util.List;
  * @see 
  * @since 
  */
-public interface UserDao<T extends User,Q extends BaseQuery> extends CommonQuery<T,Q> {
-
-
+public interface CompanyDao<T extends Company,Q extends BaseQuery>{
+   /**
+    * @param: 组合的查询条件
+    * @return: 满足条件的用户数据集合
+    * @see
+    * @since
+    */
+    List<Company> queryByCondition(Q query);
 }

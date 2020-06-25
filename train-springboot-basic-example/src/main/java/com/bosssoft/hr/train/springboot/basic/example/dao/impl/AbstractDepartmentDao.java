@@ -5,8 +5,11 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.DepartmentMapper;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Department;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.query.DepartmentQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -18,6 +21,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractUserDao<T,M extends Mapper<T>>   extends AbstractBaseDao <User, UserMapper>  implements UserDao<User, UserQuery> {
+public abstract class AbstractDepartmentDao<T,M extends Mapper<T>>   extends AbstractBaseDao <Department, DepartmentMapper>  implements DepartmentDao<Department, DepartmentQuery> {
 
 }

@@ -8,6 +8,7 @@ package com.bosssoft.hr.train.springboot.basic.example.pojo.entity;
 
 import lombok.*;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -25,10 +26,12 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 public abstract class BaseEntity implements Serializable {
+   @Id
     /**
      *  主键
      */
     private Long id;
+    private Byte status;
     /**
      * 记录所属公司ID
      */
@@ -36,7 +39,7 @@ public abstract class BaseEntity implements Serializable {
     /**
      * 组织机构ID ，一个组织机构包含多个公司
      */
-    private Long orgnizationId;
+    private Long organizationId;
     /**
      * 创建时间
      */
@@ -58,10 +61,8 @@ public abstract class BaseEntity implements Serializable {
      */
     private Long version;
 
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
+    public boolean equals(Object o) {        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BaseEntity that = (BaseEntity) o;
         return Objects.equals(id, that.id);

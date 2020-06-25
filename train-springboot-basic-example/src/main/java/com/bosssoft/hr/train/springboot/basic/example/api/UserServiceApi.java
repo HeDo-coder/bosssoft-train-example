@@ -33,6 +33,7 @@ public interface UserServiceApi {
      * @see
      * @since
      */
+
     CommonResponse<UserVO> registry(@RequestBody @Valid UserDTO userDTO);
 
     /**

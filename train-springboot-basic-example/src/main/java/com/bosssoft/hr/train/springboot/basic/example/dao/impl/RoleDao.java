@@ -5,9 +5,7 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
-
-import com.bosssoft.hr.train.springboot.basic.example.dao.CommonQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Role;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.BaseQuery;
 import java.util.List;
 /**
@@ -19,7 +17,12 @@ import java.util.List;
  * @see 
  * @since 
  */
-public interface UserDao<T extends User,Q extends BaseQuery> extends CommonQuery<T,Q> {
-
-
+public interface RoleDao<T extends Role,Q extends BaseQuery>{
+   /**
+    * @param: 组合的查询条件
+    * @return: 满足条件的用户数据集合
+    * @see
+    * @since
+    */
+    List<Role> queryByCondition(Q query);
 }
