@@ -5,14 +5,11 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
-import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CompanyMapper;
-import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.DepartmentMapper;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Company;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Department;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.query.CompanyQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.query.DepartmentQuery;
-import tk.mybatis.mapper.common.Mapper;
 
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CommonMapper;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CompanyMapper;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Company;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.query.CompanyQuery;
 /**
  * @description: 该类适配底层tk.mybatis的mapper的基本的增删除该查方法
  * <br> 统一常规的操作接口是的之类不再关注基本的方法同时隔离了底层tk.mybatis
@@ -21,6 +18,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractCompanyDao<T,M extends Mapper<T>>   extends AbstractBaseDao <Company, CompanyMapper>  implements CompanyDao<Company, CompanyQuery> {
+public abstract class AbstractCompanyDao<T,M extends CommonMapper<T>>   extends AbstractBaseDao <Company, CompanyMapper,CompanyQuery>  implements CompanyDao<Company, CompanyQuery> {
 
 }

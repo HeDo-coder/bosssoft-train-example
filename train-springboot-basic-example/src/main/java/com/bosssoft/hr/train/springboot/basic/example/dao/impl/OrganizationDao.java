@@ -22,11 +22,4 @@ import java.util.List;
  * @since 
  */
 public interface OrganizationDao<T extends Organization,Q extends BaseQuery>{
-   /**
-    * @param: 组合的查询条件
-    * @return: 满足条件的用户数据集合
-    * @see
-    * @since
-    */
-    List<User> queryByCondition(Q query);
 }

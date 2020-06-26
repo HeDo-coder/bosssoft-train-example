@@ -23,11 +23,4 @@ import java.util.List;
  * @since 
  */
 public interface ResourceDao<T extends Resource,Q extends BaseQuery>{
-   /**
-    * @param: 组合的查询条件
-    * @return: 满足条件的用户数据集合
-    * @see
-    * @since
-    */
-    List<User> queryByCondition(Q query);
 }

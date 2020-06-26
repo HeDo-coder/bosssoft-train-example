@@ -5,13 +5,11 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
+
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CommonMapper;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.DepartmentMapper;
-import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Department;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.DepartmentQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
-import tk.mybatis.mapper.common.Mapper;
 
 /**
  * @description: 该类适配底层tk.mybatis的mapper的基本的增删除该查方法
@@ -21,6 +19,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractDepartmentDao<T,M extends Mapper<T>,Q>   extends AbstractBaseDao <Department, DepartmentMapper,DepartmentQuery>  implements DepartmentDao<Department, DepartmentQuery> {
+public abstract class AbstractDepartmentDao<T,M extends CommonMapper<T>,Q>   extends AbstractBaseDao <Department, DepartmentMapper,DepartmentQuery>  implements DepartmentDao<Department, DepartmentQuery> {
 
 }

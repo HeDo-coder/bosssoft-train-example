@@ -5,6 +5,7 @@
  * @copyright: 2020-2023 www.bosssoft.com.cn Inc. All rights reserved. 
  */  
 package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CommonMapper;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.RoleMapper;
 import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.Role;
@@ -21,6 +22,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractRoleDao<T,M extends Mapper<T>,Q>   extends AbstractBaseDao <Role, RoleMapper,RoleQuery>  implements RoleDao<Role> {
+public abstract class AbstractRoleDao<T,M extends CommonMapper<T>,Q>   extends AbstractBaseDao <Role, RoleMapper,RoleQuery>  implements RoleDao<Role> {
 
 }

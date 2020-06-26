@@ -8,6 +8,7 @@ package com.bosssoft.hr.train.springboot.basic.example.dao.impl;
 
 import com.bosssoft.hr.train.springboot.basic.example.dao.CommonQuery;
 import com.bosssoft.hr.train.springboot.basic.example.dao.IBaseDao;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.CommonMapper;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.List;
  * @create: 2020-06-18 23:04
  * @since 1.0
  **/
-public abstract class AbstractBaseDao<T,M extends Mapper<T>,Q> implements IBaseDao<T,Q> {
+public abstract class AbstractBaseDao<T,M extends CommonMapper<T>,Q> implements IBaseDao<T,Q> {
 
     /**
      *  注入框架隔离的Mappper,后面的数据操作依赖此mapper

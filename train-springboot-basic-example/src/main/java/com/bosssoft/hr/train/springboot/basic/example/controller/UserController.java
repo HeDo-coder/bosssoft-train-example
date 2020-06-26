@@ -11,6 +11,8 @@ import com.bosssoft.hr.train.springboot.basic.example.data.convention.CommonResp
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleResourceVO;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleVO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.UserVO;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,7 +44,7 @@ public  class UserController extends AbstractController implements UserServiceAp
     }
 
     @Override
-    public List<UserVO> queryByComboCondition(UserQuery query) {
+    public CommonResponse<List<UserVO>> queryByComboCondition(UserQuery query) {
         return null;
     }
 
@@ -53,6 +55,31 @@ public  class UserController extends AbstractController implements UserServiceAp
 
     @Override
     public CommonResponse<List<UserVO>> assignRole(@Valid List<UserDTO> userDTOS, List<RoleDTO> roleDTOS) {
+        return null;
+    }
+
+    @Override
+    public CommonResponse<List<RoleResourceVO>> getRoleResource(@Valid Long userId) {
+        return null;
+    }
+
+    @Override
+    public CommonResponse<List<RoleVO>> getRoles(@Valid Long userId) {
+        return null;
+    }
+
+    @Override
+    public CommonResponse<UserVO> createUser(@Valid UserDTO userDTO) {
+        return null;
+    }
+
+    @Override
+    public CommonResponse<UserVO> updateUser(@Valid UserDTO userDTO) {
+        return null;
+    }
+
+    @Override
+    public CommonResponse<UserVO> deleteUser(@Valid UserDTO userDTO) {
         return null;
     }
 

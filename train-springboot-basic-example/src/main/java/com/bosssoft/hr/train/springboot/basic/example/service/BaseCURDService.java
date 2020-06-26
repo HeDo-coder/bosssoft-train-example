@@ -29,7 +29,7 @@ public abstract class BaseCURDService<D,T,Q,M> {
     public Integer remove(D dto){
         try {
             T entity=doObjectTransf(dto);
-            return  myDao.save(entity);
+            return  myDao.delete(entity);
         }catch (Exception ex){
             throw new BusinessException(BusinessErrorCode.BASE_CRUD_SERVICE_ERROR_CODE_CREATE,ex);
         }
@@ -38,7 +38,7 @@ public abstract class BaseCURDService<D,T,Q,M> {
     public Integer update(D dto){
         try {
             T entity=doObjectTransf(dto);
-            return  myDao.save(entity);
+            return  myDao.update(entity);
         }catch (Exception ex){
             throw new BusinessException(BusinessErrorCode.BASE_CRUD_SERVICE_ERROR_CODE_CREATE,ex);
         }
