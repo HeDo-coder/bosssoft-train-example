@@ -6,6 +6,7 @@
  */
 package com.bosssoft.hr.train.springboot.basic.example.api;
 
+import com.bosssoft.hr.train.springboot.basic.example.controller.CommonCRUDApi;
 import com.bosssoft.hr.train.springboot.basic.example.data.convention.CommonResponse;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
@@ -29,7 +30,7 @@ import java.util.List;
  * @see
  * @since
  */
-public interface UserServiceApi {
+public interface UserServiceApi{
     /**
      *  用户注册调用此接口
      * @param userDTO
@@ -85,36 +86,4 @@ public interface UserServiceApi {
      * @since
      */
     CommonResponse<List<RoleResourceVO>> getRoleResource(@RequestBody @Valid  Long userId);
-
-    /**
-     *
-     * @param  取得用户的角色列表
-     * @return 角色列表 内部包含 角色拥有的菜单
-     * @see
-     * @since
-     */
-    CommonResponse<List<RoleVO>> getRoles(@RequestBody @Valid  Long userId);
-
-    /**
-     * @param 待创建的用户对象的数据，ID 后台生成
-     * @return 完整的创建的对象的数据
-     * @see
-     * @since
-     */
-    CommonResponse<UserVO> createUser(@RequestBody @Valid  UserDTO userDTO);
-    /**
-     * @param  待修改的用户对象的数据
-     * @return 返回修改后的用户对象的数据
-     * @see
-     * @since
-     */
-    CommonResponse<UserVO> updateUser(@RequestBody @Valid  UserDTO userDTO);
-    /**
-     * @param 待删除的用户对象的数据，删除依据 id 和 version
-     * @return 返回被删除的对象
-     * @see
-     * @since
-     */
-    CommonResponse<UserVO> deleteUser(@RequestBody @Valid  UserDTO userDTO);
-
 }

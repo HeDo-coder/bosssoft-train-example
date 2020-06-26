@@ -8,4 +8,7 @@ package com.bosssoft.hr.train.springboot.basic.example.controller;
  * @since
  **/
 public abstract  class AbstractController {
+    protected void doPagination(){
+
+    }
 }

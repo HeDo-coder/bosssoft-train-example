@@ -7,13 +7,17 @@
 package com.bosssoft.hr.train.springboot.basic.example.controller;
 
 import com.bosssoft.hr.train.springboot.basic.example.api.UserServiceApi;
+import com.bosssoft.hr.train.springboot.basic.example.dao.mapper.UserMapper;
 import com.bosssoft.hr.train.springboot.basic.example.data.convention.CommonResponse;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
+import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.User;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleResourceVO;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleVO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.UserVO;
+import com.bosssoft.hr.train.springboot.basic.example.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -21,18 +25,19 @@ import java.util.List;
 
 /**
  * @class UserController
- * @classdesc 用户相关的业务逻辑通过控制器进行调用，功能的定义依赖api接口
- *
+ * @classdesc
  * @author Administrator
- * @date 2020-6-19  11:19
+ * @date 2020-6-26  22:26
  * @version 1.0.0
- * @see
- * @since
+ * @see 
+ * @since 
  */
 @RestController
-public  class UserController extends AbstractController implements UserServiceApi {
-
-
+public  class UserController extends BaseCRUDController<UserDTO,User,UserQuery,UserMapper,UserVO> implements UserServiceApi {
+    @Autowired
+    public  UserController(UserServiceImpl userService){
+            this.service=userService;
+    }
     @Override
     public CommonResponse<UserVO> registry(@Valid UserDTO userDTO) {
         return null;
@@ -47,7 +52,6 @@ public  class UserController extends AbstractController implements UserServiceAp
     public CommonResponse<List<UserVO>> queryByComboCondition(UserQuery query) {
         return null;
     }
-
     @Override
     public CommonResponse<UserVO> assignRole(@Valid List<RoleDTO> roleDTOS) {
         return null;
@@ -64,24 +68,28 @@ public  class UserController extends AbstractController implements UserServiceAp
     }
 
     @Override
-    public CommonResponse<List<RoleVO>> getRoles(@Valid Long userId) {
+    protected UserVO doObjectTransf(Object returnDto) {
+
         return null;
     }
 
     @Override
-    public CommonResponse<UserVO> createUser(@Valid UserDTO userDTO) {
-        return null;
+    public CommonResponse<Integer> create(@Valid UserDTO dtoParam) {
+        return super.create(dtoParam);
     }
 
     @Override
-    public CommonResponse<UserVO> updateUser(@Valid UserDTO userDTO) {
-        return null;
+    public CommonResponse<UserVO> query(@Valid UserQuery queryParam) {
+        return super.query(queryParam);
     }
 
     @Override
-    public CommonResponse<UserVO> deleteUser(@Valid UserDTO userDTO) {
-        return null;
+    public CommonResponse update(@Valid UserDTO dtoParam) {
+        return super.update(dtoParam);
     }
 
-
+    @Override
+    public CommonResponse delete(@Valid UserDTO dtoParam) {
+        return super.delete(dtoParam);
+    }
 }

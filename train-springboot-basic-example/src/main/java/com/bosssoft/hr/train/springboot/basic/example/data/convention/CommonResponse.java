@@ -1,6 +1,7 @@
 package com.bosssoft.hr.train.springboot.basic.example.data.convention;
 
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.BaseVO;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -10,6 +11,7 @@ import lombok.Data;
  * @since
  **/
 @Data
+@AllArgsConstructor
 public class CommonResponse<T> {
     private String code;
     private String mesage;
