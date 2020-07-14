@@ -6,7 +6,7 @@ import javax.validation.Valid;
 
 /**
  * @class CommonCRUDApi
- * @classdesc
+ * @classdesc 增删除改查的xxServiceApi
  * @author Administrator
  * @date 2020-6-26  22:09
  * @version 1.0.0

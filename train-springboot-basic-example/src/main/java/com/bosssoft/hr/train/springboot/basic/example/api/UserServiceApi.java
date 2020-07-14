@@ -6,15 +6,11 @@
  */
 package com.bosssoft.hr.train.springboot.basic.example.api;
 
-import com.bosssoft.hr.train.springboot.basic.example.controller.CommonCRUDApi;
 import com.bosssoft.hr.train.springboot.basic.example.data.convention.CommonResponse;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.RoleDTO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.dto.UserDTO;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.entity.RoleResource;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.query.UserQuery;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.ResourceVO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleResourceVO;
-import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.RoleVO;
 import com.bosssoft.hr.train.springboot.basic.example.pojo.vo.UserVO;
 import org.springframework.web.bind.annotation.RequestBody;
 

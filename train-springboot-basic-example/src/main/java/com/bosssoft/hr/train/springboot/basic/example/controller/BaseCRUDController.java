@@ -36,7 +36,6 @@ public abstract class BaseCRUDController<D,T,Q,M,V> extends AbstractController {
      * @see
      * @since
      */
-
     protected  abstract V doObjectTransf(Object returnDto);
 
     public  CommonResponse update(@RequestBody @Valid D dtoParam){
